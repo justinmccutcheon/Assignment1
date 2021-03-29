@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CPSC 2125 assignment1</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="wrapper">
+    <header class="header">
+      <img src="Images/cat_caviar.jpg">
+    </header>
+    <nav class="leftcolumn">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="page1.html">Page 1</a></li>
+      <li><a href="page2.html">Page 2</a></li>
+      <li><a href="page3.html">Page 3</a></li>
+      <li><a href="https://www.columbusstate.edu/">CSU Homepage</a></li>
+    </ul>
+    </nav>
+    <main class="middlecolumn">
+    <h1>Registration Form</h1>
+    <section>
+    <form method ="post" action="https://webdevbasics.net/scripts/yoga.php">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="First Name" size="50" maxlength="50"><br>
+
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="Last Name" size="50" maxlength="50"><br>
+      
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name"Email"><br>
+
+      <label for="dob">Date of Birth:</label><br>
+      <input type="date" id="dob" name="Date of Birth"
+       min="1900-01-01" max="2021-12-31"><br>
+      
+      <label for="state">State:</label><br>
+      <select id="state" name="State">
+        <option>AL</option>
+        <option>FL</option>
+        <option>GA</option>
+      </select><br>
+
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="Username"><br>
+
+      <label for="phone">Phone Number:</label><br>
+      <input type="text" id="phone" name="Phone Number" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+
+      <label for="pass">Password:</label><br>
+      <input type="password" id="pass" name="Password" minlength="8" required><br>
+
+      <label for="repass">Retype Password:</label><br>
+      <input type="password" id="repass" name="Retyped Password" minlength="8" required><br>
+      <br>
+      <input type="submit" value="Submit">
+     </form>
+     </section>
+    </main>
+    <content class="rightcolumn">
+      I'm the right column
+    </content>
+    <footer class="footer">
+      <p>Justin M.<br>notmyemail@email.com</p>
+
+    </footer>
+    <script src="script.js"></script>
+    </div>
+  </body>
+</html>

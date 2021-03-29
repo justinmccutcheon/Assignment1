@@ -1,17 +1,19 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
 header{
   text-align: center;
 
 }
-footer{
-  text-align: right;
-  font-size: 8pt;
-  color: white;
 
-}
+
 nav{
   font-size: 16pt;
-  color: purple;
+  color: white;
 }
+
 main{
   color: blueviolet;
 
@@ -19,8 +21,18 @@ main{
 body{
   background-color: black;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 h1{
   color: pink;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+  color: rgb(175, 45, 136);
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -40,4 +52,139 @@ p{
 .even{
   background: rgb(27, 180, 231);
 
+}
+
+/* make a grid */
+.wrapper {
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-gap: 10px;
+}
+
+.wrapper > * {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  /* needed for the floated layout*/
+  margin-bottom: 10px;
+}
+
+.leftcolumn {
+  float: left;
+  grid-column: 1;
+}
+
+.middlecolumn {
+  float: center;
+  grid-column: 2;
+}
+.middlecolumn li{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  size: 12pt;
+}
+
+.rightcolumn {
+  float: right;
+  grid-column: 3;
+}
+
+@media (max-width: 800px){
+  .leftcolumn, .middlecolumn, .rightcolumn{
+    grid-column: 1 / -1;
+
+  }
+}
+
+.header {
+  color: pink;
+  font-family: Arial, Helvetica, sans-serif;
+  grid-column: 1 / -1;
+  /* needed for the floated layout */
+  clear: both;
+}
+
+.footer {
+  color: pink;
+  font-family: Arial, Helvetica, sans-serif;
+  grid-column: 1 / -1;
+  /* needed for the floated layout */
+  clear: both;
+  
+}
+
+.footer p{
+  text-align: right;
+  font-size: 8pt;
+  color: pink;
+}
+
+
+section{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:lightslategray;
+  color: black;
+  border: 2px solid black;
+  margin: 1%;
+  height: auto;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12pt;
+  width:100%;
+
+}
+
+input[type=text] {
+  border-radius:10px;
+  width:100%;
+}
+
+input[type=email] {
+  border-radius:10px;
+  width:100%;
+}
+
+input[type=password] {
+  border-radius:10px;
+  width:100%;
+}
+
+select{
+  border-radius:10px;
+  width:100%;
+}
+
+input[type=date] {
+  border-radius:10px;
+  width:100%;
+}
+
+input[type=submit]{
+
+  /* remove default behavior */
+  appearance:none;
+  -webkit-appearance:none;
+
+  /* usual styles */
+  padding:10px;
+  border:none;
+  background-color:rgb(121, 12, 112);
+  color:#fff;
+  font-weight:600;
+  border-radius:5px;
+  width:100%;
+
+}
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
+  }
 }
